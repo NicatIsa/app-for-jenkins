@@ -24,5 +24,15 @@ pipeline {
                 echo "END TEST"
             }
         }
+       
+        stage('Deploy') {
+            steps {
+                echo "START Deploy"
+                echo "HELLO ${OWNER_NAME}"
+                echo "Deploying........"
+                echo "END Deploy"
+            }
+        }
+ 
     }
 }
