@@ -4,6 +4,7 @@ pipeline {
     environment {
         PROJECT_NAME = "NEPTUN"
         OWNER_NAME = "NICAT Isayev"
+        SERVER_CREDENTIALS = credentials('server-cred')
     }
     
     stages {
@@ -29,6 +30,7 @@ pipeline {
             steps {
                 echo "START Deploy"
                 echo "HELLO ${OWNER_NAME}"
+                echo "Deploying with ${SERVER_CREDENTIALS}"
                 echo "Deploying........"
                 echo "END Deploy"
             }
