@@ -17,6 +17,7 @@ jobs:
     steps:
     - name: Print Hello Build
       run: echo "Hello World for Build"
+    needs: [test]
       
  test:
    runs-on: ubuntu-latest
