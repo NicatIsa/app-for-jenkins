@@ -19,8 +19,15 @@ jobs:
       run: echo "Hello World for Build"
     needs: [test]
       
+   
  test:
    runs-on: ubuntu-latest
    steps:
    - name: Print Hello for Test
      run: echo "Hello world for Test"
+   
+   - name: Git clone
+     uses: actions/checkout@v1
+     
+   - name: List current folder
+     run: ll
